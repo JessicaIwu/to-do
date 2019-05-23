@@ -10,19 +10,31 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border: 1px solid red;
+  width: 50%;
+  margin: 10% auto
 }
 
 .App-link {
   color: #61dafb;
 }
-
+.input{
+  height: 30px;
+  width: 171px;
+  padding-left: 1rem;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

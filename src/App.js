@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Listing from "./components/Listing";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    activity: {
+      task: ' ',
+      add: function(){
+        console.log('yes')
+        let theVal = document.getElementById('inp').value;
+        let theUl = document.getElementById('theUl');
+        let li =  document.createElement("li");
+        theUl.appendChild(li).innerHTML=theVal;
+      },
+      delete: function (){}
+    }
+  }
+
+  render() {
+    const { activity } = this.state;
+    return (
+      <div className="App">
+        <Listing activity={activity}/>
+      </div>
+    );
+  }
 }
+
 
 export default App;
